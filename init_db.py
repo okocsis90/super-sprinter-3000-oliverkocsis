@@ -31,7 +31,7 @@ db.create_tables([Story, Status], safe=True)
 
 
 Status.create(status='planning')
-Status.create(status='to_do')
-Status.create(status='in_progress')
+Status.create(status='to do')
+Status.create(status='in progress')
 Status.create(status='review')
 Status.create(status='done')

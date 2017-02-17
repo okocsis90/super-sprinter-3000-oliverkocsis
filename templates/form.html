@@ -30,11 +30,9 @@
     Status:
     <br>
     <select name="status">
-        <option value="planning" {% if story and story.status=="planning" %}selected{% endif %}>Planning</option>
-        <option value="to_do" {% if story and story.status=="to_do" %}selected{% endif %}>To do</option>
-        <option value="in_progress" {% if story and story.status=="in_progress" %}selected{% endif %}>In progress</option>
-        <option value="review" {% if story and story.status=="review" %}selected{% endif %}>Review</option>
-        <option value="done" {% if story and story.status=="done" %}selected{% endif %}>Done</option>
+        {% for status in statuses %}
+        <option value="{{status.status}}" {% if story and story.status=="status.status" %}selected{% endif %}>{{status.status}}</option>
+        {%  endfor %}
     </select>
     <br><br>
     <input type="submit" value="Submit">

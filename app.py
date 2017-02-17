@@ -18,7 +18,8 @@ def list():
 
 @app.route('/story', methods=['GET'])
 def add_form():
-    return render_template('form.html')
+    statuses = Status.select()
+    return render_template('form.html', statuses=statuses)
 
 
 @app.route('/story', methods=['POST'])
@@ -34,8 +35,9 @@ def add_story():
 
 @app.route('/story/<story_id>', methods=['GET'])
 def load_existing_story(story_id):
+    statuses = Status.select()
     story = Story.select().where(story_id == Story.id).get()
-    return render_template('form.html', story=story)
+    return render_template('form.html', story=story, statuses=statuses)
 
 
 @app.route('/story/<story_id>', methods=['POST'])

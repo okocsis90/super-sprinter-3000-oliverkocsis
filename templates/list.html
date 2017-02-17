@@ -27,15 +27,15 @@
         <td>{{story.business_value}}</td>
         <td>{{story.estimation}}</td>
         <td>{{story.status}}</td>
-        <td><a href="/story/{{story.id}}">Edit</a>
-            <a href="/delete/{{story.id}}">Del</a>
+        <td><a href="/story/{{story.id}}" id="edit_button">Edit</a>
+            <a href="/delete/{{story.id}}" id="delete_button">Del</a>
 
         </td>
     </tr>
     {% endfor %}
 </table>
 
-    <br><a href="/story">Add new story</a>
+    <br><a href="/story" id="new_story_button">Add new story</a>
 
 </body>
 </html>

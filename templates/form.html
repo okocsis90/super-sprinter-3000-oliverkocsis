@@ -31,7 +31,7 @@
     <br>
     <select name="status">
         {% for status in statuses %}
-        <option value="{{status.status}}" {% if story and story.status=="status.status" %}selected{% endif %}>{{status.status}}</option>
+        <option value="{{status.status}}" {% if story and story.status==status.status %}selected{% endif %}>{{status.status}}</option>
         {%  endfor %}
     </select>
     <br><br>

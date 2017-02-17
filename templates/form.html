@@ -65,10 +65,10 @@
     <br>
     <select name="status">
         {% for status in statuses %}
-            <option value="{{status.status}}"
-                    id="{{status.status}}_input_choice"
-                    {% if story and story.status==status.status %}selected{% endif %}>
-                {{status.status}}
+            <option value={{status.id}}
+                    id="{{status.name}}_input_choice"
+                    {% if story and story.status.name==status.name %}selected{% endif %}>
+                {{status.name}}
             </option>
         {% endfor %}
     </select>

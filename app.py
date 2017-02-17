@@ -1,9 +1,13 @@
 from flask import *
 from peewee import *
-from init_db import *
+from DbHandler import *
+
+
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+
+DbHandler().init_db()
 
 
 @app.route('/', methods=['GET'])
